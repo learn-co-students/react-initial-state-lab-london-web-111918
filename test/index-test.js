@@ -26,14 +26,14 @@ describe('<ImageSlider />', () => {
 
 
 describe('<Bomb />', () => {
-  const wrapper = shallow(<Bomb initialCount={120} />);
+  const wrapper = shallow(<Bomb initialCount={5} />);
 
   it('should set the `secondsLeft` to the value of the `initialCount` prop', () => {
-    expect(wrapper.state('secondsLeft')).to.equal(120);
+    expect(wrapper.state('secondsLeft')).to.equal(5);
   });
 
   it('render the correct text when the timer is not 0', () => {
-    expect(wrapper.text()).to.equal('120 seconds left before I go boom!');
+    expect(wrapper.text()).to.equal('5 seconds left before I go boom!');
   });
 
   it('render the correct text when the timer is 0', () => {
